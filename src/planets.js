@@ -40,6 +40,11 @@ export default {
             name: 'Neptune',
             url: 'https://media-public.canva.com/MABDnNmH4RY/1/thumbnail.png'
         },
+        {
+            id: '9',
+            name: 'Sun',
+            url: 'https://media-public.canva.com/Jx-wU/MADxzwJx-wU/1/t.png'
+        }
 
     ]
 }
