@@ -1,0 +1,42 @@
+/* * {
+  border: 1px solid red;
+} */
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.Uranus--img, .Saturn--img {
+  height: 200px;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+.Saturn, .Uranus {
+  position: relative;
+  height: 238px;
+}
+
