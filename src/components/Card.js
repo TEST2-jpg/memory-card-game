@@ -18,7 +18,6 @@ export default function Places() {
             setClickedCard(clickedCards.concat(planet))
             setScore(prevScore => prevScore + 1)
         }
-        console.log(clickedCards)
     }
 
     function shuffle() {
@@ -50,7 +49,6 @@ export default function Places() {
     return (
         <div>
             <Score score={score} bestScore={bestScore}></Score>
-            {clickedCards}
             <div className="container">
                 {planet}
             </div>
