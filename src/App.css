@@ -1,28 +1,33 @@
-/* * {
-  border: 1px solid red;
-} */
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
-/* body {
+body {
+  color: white;
   background-image: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=893&q=80");
-} */
+}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgb(0 0 0 / 65%);
   transition: 0.3s;
   border-radius: 10px;
   width: 100%;
-  max-width: 300px;
+  max-width: 170px;
   text-align: center;
   padding: 20px;
+  height: 170px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+img, .Uranus--img,
+  .Saturn--img {
+  height: 100px;
 }
 
 .card:hover {
@@ -30,11 +35,14 @@
   cursor: pointer;
 }
 
+.name {
+  margin-top: 0;
+}
+
 .Uranus--img,
 .Saturn--img {
-  height: 200px;
   position: absolute;
-  top: -9955px;
+  top: -10045px;
   bottom: -9999px;
   left: -9999px;
   right: -9999px;
@@ -50,16 +58,64 @@
 .header {
   text-align: center;
   font-family: 'PT sans';
-  font-size: 3rem;
+  font-size: 2.7rem;
   margin: 40px 20%;
+  letter-spacing: 2.5px;
 }
 
 p {
   font-size: 1.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-weight: 300;
 }
 
 .Saturn--name,
 .Uranus--name {
   position: relative;
+}
+
+.score {
+  font-size: 20px;
+  font-family: ui-monospace;
+  position: sticky;
+  top: 20px;
+  z-index: 99999;
+  letter-spacing: 2px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 954px) {
+
+  .container {
+    gap: 15px;
+  }
+.score {
+  font-size: smaller;
+  margin-bottom: 0;
+}
+
+  body {
+    margin: 20px;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 20px;
+  }
+  .card {
+    height: 100px;
+    max-width: 100px;
+  }
+  img, .Uranus--img,
+  .Saturn--img {
+    height: 80px;
+    top: -10134px;
+  }
+  .name {
+    margin: 0;
+    font-size: 1rem;
+  }
 }

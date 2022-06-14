@@ -1,5 +1,10 @@
-export default {
+let planets = {
     data: [
+        {
+            id: '9',
+            name: 'Sun',
+            url: 'https://media-public.canva.com/Jx-wU/MADxzwJx-wU/1/t.png'
+        },
         {
             id: '1',
             name: 'Mercury',
@@ -41,10 +46,22 @@ export default {
             url: 'https://media-public.canva.com/MABDnNmH4RY/1/thumbnail.png'
         },
         {
-            id: '9',
-            name: 'Sun',
-            url: 'https://media-public.canva.com/Jx-wU/MADxzwJx-wU/1/t.png'
-        }
+            id: '10',
+            name: 'Asteroids',
+            url: 'https://media-public.canva.com/9AP4A/MAEU-I9AP4A/1/t.png'
+        },
+        {
+            id: '11',
+            name: 'Pluto',
+            url: 'https://media-public.canva.com/irgRk/MAEmSSirgRk/1/tl.png'
+        },
+        {
+            id: '12',
+            name: 'Moons',
+            url: 'https://media-public.canva.com/MkkTs/MAEFhKMkkTs/1/t.png'
+        },
 
     ]
 }
+
+export default planets  
