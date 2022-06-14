@@ -13,7 +13,6 @@ export default function Places() {
         if (clickedCards.includes(planet)) {
             setClickedCard([])
             setScore(0)
-            setBestScore(score)
         }
         else {
             setClickedCard(clickedCards.concat(planet))
@@ -33,6 +32,11 @@ export default function Places() {
         shuffle()
     }, [score])
 
+    React.useEffect(() => {
+        setBestScore(prev => {
+            return score > bestScore ? score : prev 
+        })
+    }, [score])
 
     const planet = planetData.map(planet => {
         return <div className="card" key={planet.id}>
