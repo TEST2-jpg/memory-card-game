@@ -1,8 +1,26 @@
 import React from "react";
 import planets from '../planets'
+import Score from './Score'
 
-export default function Places(props) {
+export default function Places() {
     const [planetData, setPlanet] = React.useState(planets.data)
+    const [score, setScore] = React.useState(0)
+    const [clickedCards, setClickedCard] = React.useState([])
+    const [bestScore, setBestScore] = React.useState(0)
+
+    function clickHandle(e) {
+        let planet = e.currentTarget.className
+        if (clickedCards.includes(planet)) {
+            setClickedCard([])
+            setScore(0)
+            setBestScore(score)
+        }
+        else {
+            setClickedCard(clickedCards.concat(planet))
+            setScore(prevScore => prevScore + 1)
+        }
+        console.log(clickedCards)
+    }
 
     function shuffle() {
         setPlanet(planetData
@@ -13,12 +31,12 @@ export default function Places(props) {
 
     React.useEffect(() => {
         shuffle()
-    }, [])
+    }, [score])
 
 
     const planet = planetData.map(planet => {
         return <div className="card" key={planet.id}>
-            <div className={planet.name}>
+            <div className={planet.name} onClick={clickHandle}>
                 <p className={`${planet.name}--name name`}>{planet.name}</p>
                 <img src={planet.url} className={`${planet.name}--img`} alt={planet.name}></img>
             </div>
@@ -26,8 +44,12 @@ export default function Places(props) {
     })
 
     return (
-        <div className="container">
-            {planet}
+        <div>
+            <Score score={score} bestScore={bestScore}></Score>
+            {clickedCards}
+            <div className="container">
+                {planet}
+            </div>
         </div>
     )
 }
